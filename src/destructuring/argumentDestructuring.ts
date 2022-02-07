@@ -1,5 +1,5 @@
-import fixturePayload from '../fixtures/payload.json';
+import { Product } from '@interfaces/Product';
 
-export const argumentDestructuring = (): string => {
-  return fixturePayload.key;
+export const argumentDestructuring = ({ key }: Product): string => {
+  return key;
 };
