@@ -13,6 +13,23 @@ module.exports = function (w) {
       const chai = require('chai');
 
       global.expect = require('chai').expect;
+
+      var module = require('module').Module;
+      var originalRequire = module.prototype.require;
+
+      if (!originalRequire._replaced) {
+        module.prototype.require = function (filePath) {
+          // add tsconfig path mappings here...
+
+          filePath = filePath.replace('@fixtures', 'src/fixtures');
+
+          filePath = filePath.replace('@interfaces', 'src/interfaces');
+
+          return originalRequire.call(this, filePath);
+        };
+
+        originalRequire._replaced = true;
+      }
     },
 
     testFramework: 'mocha',
