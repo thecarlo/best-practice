@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "declaration": true,
+    "isolatedModules": true,
+    "noImplicitAny": false,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "module": "es6",
+    "target": "ES2017",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "pretty": true,
+    "sourceMap": false,
+    "emitDecoratorMetadata": false,
+    "types": ["mocha"],
+    "typeRoots": ["node_modules/@types"],
+    "baseUrl": "src",
+    "paths": {
+      "@fixtures/*": ["fixtures/*"],
+      "@interfaces/*": ["interfaces/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist/**/*"]
+}

@@ -1,0 +1,9 @@
+{
+  "key": "AU01",
+  "body": "this is the body",
+  "title": "this is the title",
+  "colour": "blue",
+  "country": "Australia",
+  "productCategory": "Electronics",
+  "price": 99
+}
